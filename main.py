@@ -16,7 +16,7 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", 10000))
     
     mcp.run(
-        transport="streamable-http",  # production best
-        host="0.0.0.0",
-        port=port
-    )
+    transport="streamable-http",
+    host="0.0.0.0",
+    port=port
+)
