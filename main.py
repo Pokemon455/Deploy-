@@ -1,26 +1,3 @@
-"""
-FastMCP Python REPL Server
-==========================
-A lightweight MCP (Model Context Protocol) server that exposes a Python REPL
-as an AI-callable tool. Any MCP-compatible AI (e.g. Claude) can invoke the
-`run_python` tool to execute arbitrary Python code and receive the output.
-
-How it works:
-    1. FastMCP creates an MCP server named "Prod MCP"
-    2. LangChain's PythonREPLTool handles actual code execution
-    3. The server listens over Streamable-HTTP transport
-    4. Claude (or any MCP client) sends code → server executes → returns output
-
-Deployment:
-    - Render / Railway: PORT env variable is auto-set by the platform
-    - Local: defaults to port 10000
-    - MCP endpoint: http://<host>:<port>/mcp
-
-Usage (Claude.ai):
-    Add this URL in Claude.ai → Settings → Connectors:
-    https://your-render-url.onrender.com/mcp
-"""
-
 # server.py
 import os
 from fastmcp import FastMCP                                    # MCP server framework
